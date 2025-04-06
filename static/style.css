@@ -1,0 +1,105 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  
+}
+
+.login {
+    position: relative;
+    background: rgba(239, 234, 234, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.login:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 15px 30px rgba(171, 0, 0, 0.6);
+    background: rgba(1, 0, 0, 0.2);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px; 
+    height: auto;
+}
+
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #e30808;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 18px;
+    border: 2px solid #b30000;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #b30000;
+    color: white;
+    padding: 15px 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+#pred1 {
+    color: #b30000;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 22px;
+}

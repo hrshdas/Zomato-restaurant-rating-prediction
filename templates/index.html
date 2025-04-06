@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Restaurant Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='background1.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>    
+    
+    <div class="login">
+        <h1>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Zomato Logo" class="logo">
+            Prediction
+        </h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="Restaurant_ID" placeholder="Restaurant ID" required />
+            <input type="text" name="City" placeholder="City" required />
+            <input type="text" name="Cuisines" placeholder="Cuisines" required />
+            <input type="text" name="Has_table_booking" placeholder="Has table booking" required />
+            <input type="text" name="Votes" placeholder="Votes" required />
+            <input type="text" name="Avg_Cost_for_2" placeholder="Avg cost for 2 people" required />
+            <button type="submit">Predict</button>
+        </form>
+        <h1 id="pred1">{{ prediction_text }}</h1>
+    </div>
+</body>
+</html>
